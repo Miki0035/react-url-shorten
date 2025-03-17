@@ -1,6 +1,13 @@
 import logo from "./assets/images/logo.svg";
 import "./App.css";
-import { FormSection, HeroSection, MobileNav, StatSection } from "./components";
+import {
+  BoostSection,
+  Footer,
+  FormSection,
+  HeroSection,
+  MobileNav,
+  StatSection,
+} from "./components";
 const App = () => {
   return (
     <>
@@ -33,11 +40,12 @@ const App = () => {
         <HeroSection />
         <FormSection />
         <StatSection />
+        <BoostSection />
+        <Footer />
       </main>
+
       {/*  a link here... Shorten It! Advanced
-      Statistics Brand Recognition Detailed Records  
-       Boost your links today Get
-      Started Features Link Shortening Branded Links Analytics Resources Blog
+        Features Link Shortening Branded Links Analytics Resources Blog
       Developers Support Company About Our Team Careers Contact
       <div className="attribution">
         Challenge by{" "}

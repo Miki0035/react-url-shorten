@@ -1,0 +1,59 @@
+.boost-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 2rem;
+  background-color: var(--veryDarkViolet);
+  background-image: url("../assets/images/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1020px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container h4 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+.container p {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.container p a {
+  background-color: var(--cyan);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.2rem;
+}
+.container p a:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .boost-section {
+    background-image: url("../assets/images/bg-boost-desktop.svg");
+  }
+  .container {
+    gap: 40px;
+  }
+  .container h4 {
+    font-size: 2rem;
+  }
+  .container p a {
+    font-size: 1.5rem;
+  }
+}
+
+
