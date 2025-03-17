@@ -1,0 +1,11 @@
+.stat-section {
+    width: 100%;
+    padding: 2rem 0.5rem;
+}
+.stat-container {
+    display: flex;
+    max-width: 1020px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}

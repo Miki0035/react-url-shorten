@@ -1,0 +1,51 @@
+.mobile-menu:hover {
+  cursor: pointer;
+}
+
+.mobile-nav-container {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-nav-container ul {
+  width: 80%;
+  background-color: var(--darkViolet);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.5rem;
+}
+.mobile-nav-container ul li {
+  margin: 1rem 0;
+  list-style-type: none;
+}
+.mobile-nav-container ul li a {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.mobile-nav-container ul hr {
+  width: 80%;
+  height: 1px;
+  color: var(--grey);
+  margin: 1rem 0;
+}
+
+.mobile-nav-container .signup-nav-link {
+  background-color: var(--cyan);
+  width: 80%;
+  text-align: center;
+  padding: 0.5rem 2rem;
+  border-radius: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-container {
+    display: none;
+  }
+}
