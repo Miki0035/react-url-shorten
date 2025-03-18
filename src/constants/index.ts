@@ -51,5 +51,5 @@ export const socialIcons = [
   new URL("../assets/images/icon-facebook.svg", import.meta.url).href,
   new URL("../assets/images/icon-twitter.svg", import.meta.url).href,
   new URL("../assets/images/icon-pinterest.svg", import.meta.url).href,
-  new URL("../assets/images/icon-instegram.svg", import.meta.url).href,
+  new URL("../assets/images/icon-instagram.svg", import.meta.url).href,
 ];

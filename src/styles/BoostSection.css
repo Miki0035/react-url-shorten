@@ -44,6 +44,7 @@
 @media screen and (min-width: 768px) {
   .boost-section {
     background-image: url("../assets/images/bg-boost-desktop.svg");
+    background-size: cover;
   }
   .container {
     gap: 40px;
