@@ -14,9 +14,9 @@ const Footer = () => {
           ))}
         </div>
         <div className="social-containers">
-          {socialIcons.map((icon) => (
+          {socialIcons.map(({ icon, img }) => (
             <a key={icon} href="/">
-              <img key={icon} src={icon} alt-={`${icon} png`} />
+              <img key={icon} src={img} alt-={`${icon} social`} />
             </a>
           ))}
         </div>

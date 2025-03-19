@@ -14,7 +14,7 @@ const Card = ({
   return (
     <div className={`card-container ${`container-${id}`}`}>
       <div className="inner-content">
-        <img src={image} alt={image} />
+        <img src={image} alt={`${title} image `} />
         <div className="card-content">
           <h3>{title}</h3>
           <p>{subtitle}</p>

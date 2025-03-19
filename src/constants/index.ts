@@ -48,8 +48,20 @@ export const footerLinks = [
 ];
 
 export const socialIcons = [
-  new URL("../assets/images/icon-facebook.svg", import.meta.url).href,
-  new URL("../assets/images/icon-twitter.svg", import.meta.url).href,
-  new URL("../assets/images/icon-pinterest.svg", import.meta.url).href,
-  new URL("../assets/images/icon-instagram.svg", import.meta.url).href,
+  {
+    icon: "facebook",
+    img: new URL("../assets/images/icon-facebook.svg", import.meta.url).href,
+  },
+  {
+    icon: "twitter",
+    img: new URL("../assets/images/icon-twitter.svg", import.meta.url).href,
+  },
+  {
+    icon: "pinterest",
+    img: new URL("../assets/images/icon-pinterest.svg", import.meta.url).href,
+  },
+  {
+    icon: "instagram",
+    img: new URL("../assets/images/icon-instagram.svg", import.meta.url).href,
+  },
 ];
