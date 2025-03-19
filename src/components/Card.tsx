@@ -16,7 +16,7 @@ const Card = ({
       <div className="inner-content">
         <img src={image} alt={image} />
         <div className="card-content">
-          <h4>{title}</h4>
+          <h3>{title}</h3>
           <p>{subtitle}</p>
         </div>
       </div>
