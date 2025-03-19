@@ -3,7 +3,7 @@ const BoostSection = () => {
   return (
     <section className="boost-section">
       <div className="container">
-        <h4>Boost your links today</h4>
+        <h2>Boost your links today</h2>
         <p>
           <a href="#">Get Started </a>
         </p>
