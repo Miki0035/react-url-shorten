@@ -14,18 +14,18 @@ const App = () => {
       <header>
         <nav className="navbar">
           <div className="logo-container">
-            <a href="#">
+            <a href="/">
               <img src={logo} alt="shortly logo" />
             </a>
             <ul>
               <li>
-                <a href="#">Features</a>
+                <a href="/">Features</a>
               </li>
               <li>
-                <a href="#">Pricing</a>
+                <a href="/">Pricing</a>
               </li>
               <li>
-                <a href="#">Resources</a>
+                <a href="/">Resources</a>
               </li>
             </ul>
           </div>
@@ -52,7 +52,7 @@ const App = () => {
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor
         </a>
-        . Coded by <a href="#">Your Name Here</a>.
+        . Coded by <a href="/">Your Name Here</a>.
       </div> */}
     </>
   );

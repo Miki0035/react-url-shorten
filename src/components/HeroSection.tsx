@@ -15,7 +15,7 @@ const HeroSection = () => {
             links are performing.
           </p>
 
-          <a href="#">Get Started</a>
+          <a href="/">Get Started</a>
         </div>
       </div>
     </section>

@@ -29,20 +29,20 @@ const MobileNav = () => {
         <div className="mobile-nav-container">
           <ul>
             <li>
-              <a href="#">Features</a>
+              <a href="/">Features</a>
             </li>
             <li>
-              <a href="#">Pricing</a>
+              <a href="/">Pricing</a>
             </li>
             <li>
-              <a href="#">Resources</a>
+              <a href="/">Resources</a>
             </li>
             <hr />
             <li>
-              <a href="#">Login</a>
+              <a href="/">Login</a>
             </li>
             <li className="signup-nav-link">
-              <a href="#">Sign Up</a>
+              <a href="/">Sign Up</a>
             </li>
           </ul>
         </div>
@@ -51,20 +51,20 @@ const MobileNav = () => {
         <div className="mobile-nav-container">
           <ul>
             <li>
-              <a href="#">Features</a>
+              <a href="/">Features</a>
             </li>
             <li>
-              <a href="#">Pricing</a>
+              <a href="/">Pricing</a>
             </li>
             <li>
-              <a href="#">Resources</a>
+              <a href="/">Resources</a>
             </li>
             <hr />
             <li>
-              <a href="#">Login</a>
+              <a href="/">Login</a>
             </li>
             <li className="signup-nav-link">
-              <a href="#">Sign Up</a>
+              <a href="/">Sign Up</a>
             </li>
           </ul>
         </div>

@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-grid">
         <div className="footer-logo">
-          <a href="#">Shortly</a>
+          <a href="/">Shortly</a>
         </div>
         <div className="link-containers">
           {footerLinks.map(({ id, link, sublinks }) => (
@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
         <div className="social-containers">
           {socialIcons.map((icon) => (
-            <a key={icon} href="#">
+            <a key={icon} href="/">
               <img key={icon} src={icon} alt-={`${icon} png`} />
             </a>
           ))}

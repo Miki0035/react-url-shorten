@@ -5,7 +5,7 @@ const BoostSection = () => {
       <div className="container">
         <h2>Boost your links today</h2>
         <p>
-          <a href="#">Get Started </a>
+          <a href="/">Get Started </a>
         </p>
       </div>
     </section>
