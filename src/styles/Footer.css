@@ -74,7 +74,10 @@ footer {
     gap: 5rem;
   }
 
-  .social-containers a:hover img svg {
-    color: var(--cyan);
-  }
+  /* 
+  .social-containers a:hover img  {
+    width: 100%;
+    background-color: var(--cyan);
+    border-radius: 50%;
+  } */
 }

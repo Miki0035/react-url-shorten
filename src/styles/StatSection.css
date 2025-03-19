@@ -26,6 +26,7 @@
 .stat-header p {
   margin-top: 1rem;
   text-align: center;
+  color: var(--grayishViolet);
 }
 
 .stat-cards-container {
@@ -52,5 +53,11 @@
   .stat-cards-container {
     flex-direction: row;
     justify-content: center;
+  }
+  .stat-header h2 {
+    font-size: 3rem;
+  }
+  .stat-header p {
+    font-size: 1.2rem;
   }
 }
