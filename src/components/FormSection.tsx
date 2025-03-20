@@ -20,22 +20,27 @@ const FormSection = () => {
   };
 
   async function shortenUrl() {
-    setButtonText("Shortening...");
-    const response = await fetch('https://cleanuri.com/api/v1/shorten', {
-      method: "POST",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams({ url: linkText }),
-    });
-    const data = await response.json();
-    if (data.error) {
-      setError("URL is invalid");
-    } else {
-      setShortenedLink((prevState) => [...prevState, data.result_url]);
+    try {
+      const response = await fetch(
+        "https://cleanuri.com/api/v1/shorten",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: new URLSearchParams({ url: linkText }),
+        }
+      );
+      const data = await response.json();
+      if (data.error) {
+        setError("URL is invalid");
+      } else {
+        setShortenedLink((prevState) => [...prevState, data.result_url]);
+      }
+      setButtonText("Shorten It!");
+    } catch (e) {
+      console.error(e);
     }
-    setButtonText("Shorten It!");
   }
 
   function copyToClipBoard(index: number, e: React.MouseEvent) {
