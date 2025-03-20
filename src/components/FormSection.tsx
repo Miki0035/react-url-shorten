@@ -24,6 +24,7 @@ const FormSection = () => {
     const response = await fetch('https://cleanuri.com/api/v1/shorten', {
       method: "POST",
       headers: {
+        "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/x-www-form-urlencoded",
       },
       body: new URLSearchParams({ url: linkText }),
