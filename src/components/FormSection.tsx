@@ -21,7 +21,7 @@ const FormSection = () => {
 
   async function shortenUrl() {
     setButtonText("Shortening...");
-    const response = await fetch("/api/shorten", {
+    const response = await fetch('https://cleanuri.com/api/v1/shorten', {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
