@@ -21,7 +21,7 @@ const FormSection = () => {
 
   async function shortenUrl() {
     setButtonText("Shortening...");
-    const response = await fetch("/api/shorten", {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/shorten`, {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
