@@ -22,26 +22,23 @@ const FormSection = () => {
   async function shortenUrl() {
     setButtonText("Shortening...");
     try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_BASE_URL}/api/shorten`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams({ url: linkText }),
-        }
-      );
+      const response = await fetch("/api/shorten", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({ url: linkText }),
+      });
       const data = await response.json();
       if (data.error) {
         setError("URL is invalid");
       } else {
         setShortenedLink((prevState) => [...prevState, data.result_url]);
       }
-      setButtonText("Shorten It!");
     } catch (e) {
       console.error(e);
     }
+    setButtonText("Shorten It!");
   }
 
   function copyToClipBoard(index: number, e: React.MouseEvent) {
@@ -79,7 +76,7 @@ const FormSection = () => {
       {shortenedLink.length > 0 &&
         shortenedLink.map((link, index) => (
           <div key={index} className="shortened-link-container">
-            <div className="original-link">{linkText}</div>
+            <div className="original-link">{link}</div>
             <div className="shortened-link">
               <p className={`link-${index}`}>{link}</p>
               <button onClick={(e) => copyToClipBoard(index, e)}>copy</button>
