@@ -21,9 +21,8 @@ const FormSection = () => {
 
   async function shortenUrl() {
     setButtonText("Shortening...");
-
     try {
-      const response = await fetch(`/${import.meta.env.VITE_API_BASE_URL}/shorten`, {
+      const response = await fetch(`${import.meta.env.VITE_PROXY_SERVER}/api`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,8 +38,8 @@ const FormSection = () => {
         setShortenedLink((prevState) => [...prevState, data.result_url]);
       }
       setButtonText("Shorten It!");
-    } catch (e) {
-      console.error(e);
+    } catch (e: unknown) {
+      setError((e as Error).message);
     }
     setButtonText("Shorten It!");
   }
