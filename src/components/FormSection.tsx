@@ -25,9 +25,11 @@ const FormSection = () => {
       const response = await fetch("/api/shorten", {
         method: "POST",
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Type": "application/json",
         },
-        body: new URLSearchParams({ url: linkText }),
+        body: JSON.stringify({
+          url: encodeURI(linkText.trim()),
+        }),
       });
       const data = await response.json();
       if (data.error) {
