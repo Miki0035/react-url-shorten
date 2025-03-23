@@ -23,7 +23,7 @@ const FormSection = () => {
     setButtonText("Shortening...");
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/shorten`, {
+      const response = await fetch(`/${import.meta.env.VITE_API_BASE_URL}/shorten`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
