@@ -31,7 +31,8 @@ const FormSection = () => {
           url: encodeURI(linkText.trim()),
         }),
       });
-      const data = await response.json();
+      const rawData = await response.text();
+      const data = JSON.parse(rawData);
       if (data.error) {
         setError("URL is invalid");
       } else {
