@@ -23,7 +23,7 @@ const FormSection = () => {
     setButtonText("Shortening...");
 
     try {
-      const response = await fetch("/api/shorten", {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/shorten`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,7 +33,6 @@ const FormSection = () => {
         }),
       });
       const data = await response.json();
-      console.log(data)
       if (data.error) {
         setError("URL is invalid");
       } else {
@@ -81,7 +80,7 @@ const FormSection = () => {
       {shortenedLink.length > 0 &&
         shortenedLink.map((link, index) => (
           <div key={index} className="shortened-link-container">
-            <div className="original-link">{linkText}</div>
+            <div className="original-link">{link}</div>
             <div className="shortened-link">
               <p className={`link-${index}`}>{link}</p>
               <button onClick={(e) => copyToClipBoard(index, e)}>copy</button>
