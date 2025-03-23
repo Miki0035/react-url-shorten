@@ -23,10 +23,9 @@ const FormSection = () => {
     setButtonText("Shortening...");
 
     try {
-      const response = await fetch("https://cleanuri.com/api/v1/shorten", {
+      const response = await fetch("/api/shorten", {
         method: "POST",
         headers: {
-          "Allow-Control-Allow-Origin": "*",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -34,6 +33,7 @@ const FormSection = () => {
         }),
       });
       const data = await response.json();
+      console.log(data)
       if (data.error) {
         setError("URL is invalid");
       } else {
