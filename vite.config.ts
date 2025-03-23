@@ -9,7 +9,7 @@ export default defineConfig({
       '/api/shorten': {
         target: 'https://cleanuri.com/api/v1/shorten',
         changeOrigin: true,
-        secure: true,
+        secure: false,
         rewrite: (path) => path.replace(/^\/api\/shorten/, ''),
       },
     },
