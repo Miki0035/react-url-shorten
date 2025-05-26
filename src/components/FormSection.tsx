@@ -3,6 +3,7 @@ import "../styles/FormSection.css";
 
 const FormSection = () => {
   const [linkText, setLinkText] = useState("");
+  const [originalLink, setOriginalLink] = useState("");
   const [shortenedLink, setShortenedLink] = useState<string[]>([]);
   const [buttonText, setButtonText] = useState("Shorten It!");
   const [error, setError] = useState("");
@@ -20,6 +21,7 @@ const FormSection = () => {
   };
 
   async function shortenUrl() {
+    setOriginalLink(linkText);
     setButtonText("Shortening...");
     try {
       const response = await fetch(`${import.meta.env.VITE_PROXY_SERVER}/api`, {
@@ -79,7 +81,7 @@ const FormSection = () => {
       {shortenedLink.length > 0 &&
         shortenedLink.map((link, index) => (
           <div key={index} className="shortened-link-container">
-            <div className="original-link">{link}</div>
+            <div className="original-link">{originalLink}</div>
             <div className="shortened-link">
               <p className={`link-${index}`}>{link}</p>
               <button onClick={(e) => copyToClipBoard(index, e)}>copy</button>
